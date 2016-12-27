@@ -5,7 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+# Use MongoBD
+gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git'
+gem 'bson_ext'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use Puma as the app server
@@ -32,9 +34,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git'
-gem 'bson_ext'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
