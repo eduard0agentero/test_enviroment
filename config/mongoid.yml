@@ -149,4 +149,4 @@ test:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
+      uri: mongodb://heroku_admin:1234@ds145158.mlab.com:45158/heroku_sxmbb21v
