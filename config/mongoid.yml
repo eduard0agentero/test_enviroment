@@ -135,16 +135,12 @@ development:
     # Application name that is printed to the mongodb logs upon establishing a
     # connection in server versions >= 3.4. Note that the name cannot exceed 128 bytes.
     # app_name: MyApplicationName
+
 test:
   clients:
     default:
-      database: mongo_development
-      hosts:
-        - localhost:27017
-      options:
-        read:
-          mode: :primary
-        max_pool_size: 1
+      uri: mongodb://heroku_admin:1234@ds145158.mlab.com:45158/heroku_sxmbb21v
+
 
 production:
   sessions:
