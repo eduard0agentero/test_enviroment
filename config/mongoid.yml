@@ -136,13 +136,22 @@ development:
     # connection in server versions >= 3.4. Note that the name cannot exceed 128 bytes.
     # app_name: MyApplicationName
 
-test:
+# mongoid 5.x
+#
+production:
   clients:
     default:
-      uri: mongodb://heroku_admin:1234@ds145158.mlab.com:45158/heroku_sxmbb21v
+     # The standard MongoDB connection URI allows for easy
+     # replica set connection setup.
+     # Use environment variables or a config file to keep your
+     # credentials safe e.g. <%= ENV['MONGODB_URI'] %>.
+     uri: mongodb://heroku_admin:1234@ds145158.mlab.com:45158/heroku_sxmbb21v
+
+     options:
+       # The default timeout is 5, which is the time in seconds
+       # for a connection to time out.
+       # We recommend 15 because it allows for plenty of time
+       # in most operating environments.
+       connect_timeout: 15
 
 
-production:
-  sessions:
-    default:
-      uri: mongodb://heroku_admin:1234@ds145158.mlab.com:45158/heroku_sxmbb21v
