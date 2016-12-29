@@ -8,6 +8,9 @@ end
 # Use MongoBD
 gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git'
 gem 'bson_ext'
+# Use FilePicker
+gem 'filepicker-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use Puma as the app server
